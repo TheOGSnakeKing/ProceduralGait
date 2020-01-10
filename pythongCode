@@ -1,0 +1,133 @@
+/*Procedural Gait Generation Of An Ape*/
+/* pSphere1 - RearLeftLeg */
+
+$RearTravel=(0.45*slider.translateX)+3.5;
+$RearFreq=slider.translateX+2;
+$RearLeftOffset=(-0.03*slider.translateX)+0.7;
+
+pSphere1.translateX = $RearTravel*sin(time*$RearFreq+$RearLeftOffset);
+$tempy = cos(time*$RearFreq+$RearLeftOffset);
+$zero = 0;
+
+if($tempy > $zero)
+{
+pSphere1.translateY=$tempy;
+}
+else
+{
+pSphere1.translateY=$zero;
+}
+
+if(pSphere1.translateY == 0)
+{
+pSphere1.rotateZ=0;
+}
+
+else if(pSphere1.translateY > 0 && pSphere1.translateX > 1.667)
+{
+pSphere1.rotateZ=28;
+}
+
+else if(pSphere1.translateY>0 && pSphere1.translateX<0.879)
+{
+pSphere1.rotateZ=-15;
+}
+
+/* pShere2-RearRightLeg */
+
+$RearRightOffset=(-0.33*slider.translateX)+4.3;
+
+pSphere2.translateX = $RearTravel*sin(time*$RearFreq+$RearRightOffset);
+$pSphere2tempy = cos(time*$RearFreq+$RearRightOffset);
+$pSphere2zero = 0;
+
+if($pSphere2tempy > $pSphere2zero)
+{
+pSphere2.translateY=$pSphere2tempy;
+}
+else
+{
+pSphere2.translateY=$pSphere2zero;
+}
+
+if(pSphere2.translateY == 0)
+{
+pSphere2.rotateZ=0;
+}
+
+else if(pSphere2.translateY > 0 && pSphere2.translateX > 1.667)
+{
+pSphere2.rotateZ=28;
+}
+
+else if(pSphere2.translateY>0 && pSphere2.translateX<0.879)
+{
+pSphere2.rotateZ=-15;
+}
+
+/* pSphere3 - FrontRightLeg */
+
+$FrontRightOffset=(0.37*slider.translateX)-0.1;
+$FrontFootTravel=(0.45*slider.translateX)+3.5;
+$FrontFootFrequency=slider.translateX+2;
+
+pSphere3.translateX = $FrontFootTravel*sin(time*$FrontFootFrequency+$FrontRightOffset);
+$pSphere3tempy = cos(time*$FrontFootFrequency+$FrontRightOffset);
+$pSphere3zero = 0;
+
+if($pSphere3tempy > $pSphere3zero)
+{
+pSphere3.translateY=$pSphere3tempy;
+}
+else
+{
+pSphere3.translateY=$pSphere3zero;
+}
+
+if(pSphere3.translateY == 0)
+{
+pSphere3.rotateZ=0;
+}
+
+else if(pSphere3.translateY > 0 && pSphere3.translateX > 1.667)
+{
+pSphere3.rotateZ=28;
+}
+
+else if(pSphere3.translateY>0 && pSphere3.translateX<0.879)
+{
+pSphere3.rotateZ=-15;
+}
+
+
+/* pShere4 - FrontLeftFoot*/
+
+$FrontLeftOffset=(-0.03*slider.translateX)+3.63;
+
+pSphere4.translateX = $FrontFootTravel*sin(time*$FrontFootFrequency+$FrontLeftOffset);
+$pSphere4tempy = cos(time*$FrontFootFrequency+$FrontLeftOffset);
+$pSphere4zero = 0;
+
+if($pSphere4tempy > $pSphere4zero)
+{
+pSphere4.translateY=$pSphere4tempy;
+}
+else
+{
+pSphere4.translateY=$pSphere4zero;
+}
+
+if(pSphere4.translateY == 0)
+{
+pSphere4.rotateZ=0;
+}
+
+else if(pSphere4.translateY > 0 && pSphere4.translateX > 1.667)
+{
+pSphere4.rotateZ=28;
+}
+
+else if(pSphere4.translateY>0 && pSphere4.translateX<0.879)
+{
+pSphere4.rotateZ=-15;
+}
